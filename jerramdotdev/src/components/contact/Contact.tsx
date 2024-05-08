@@ -13,10 +13,10 @@ const Contact = () => {
     message: '',
   });
 
-  const onhandleChange = (e) => {
-    setEmailData({ ...emailData, [e.target.name]: e.target.value });
+  const onhandleChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    setEmailData({ ...emailData, [e.currentTarget.name]: e.currentTarget.value });
   };
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setState(false);
     emailjs
@@ -27,7 +27,8 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
+        () => {
+          console.clear();
           setState(true);
           Swal.fire({
             icon: 'success',
@@ -37,6 +38,12 @@ const Contact = () => {
             allowOutsideClick: false,
             showConfirmButton: true,
             confirmButtonColor: '#04138f',
+          });
+          setEmailData({
+            user_name: '',
+            user_email: '',
+            user_number: '',
+            message: '',
           });
           return;
         },
@@ -81,6 +88,7 @@ const Contact = () => {
               name="user_name"
               id="user_name"
               placeholder="Your name"
+              value={emailData?.user_name || ''}
               onChange={onhandleChange}
               required
             />
@@ -90,6 +98,7 @@ const Contact = () => {
               name="user_email"
               id="user_email"
               placeholder="Your email"
+              value={emailData?.user_email || ''}
               onChange={onhandleChange}
               required
             />
@@ -99,6 +108,7 @@ const Contact = () => {
               name="user_number"
               id="user_number"
               placeholder="Your contact number"
+              value={emailData?.user_number || ''}
               onChange={onhandleChange}
               required
             />
@@ -107,6 +117,7 @@ const Contact = () => {
               name="message"
               id="message"
               placeholder="Your message"
+              value={emailData?.message || ''}
               onChange={onhandleChange}
               required
             />

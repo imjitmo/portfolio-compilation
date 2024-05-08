@@ -1,15 +1,7 @@
-// import CountUp
 import CountUp from 'react-countup';
-
-//import intersection observer hook
 import { useInView } from 'react-intersection-observer';
-
-//motion
 import { motion } from 'framer-motion';
-
-// variant
 import { fadeIn } from '@/anim/variant';
-import { Link } from 'react-scroll';
 
 const About = () => {
   const [ref, inView] = useInView({
