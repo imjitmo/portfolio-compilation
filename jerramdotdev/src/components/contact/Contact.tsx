@@ -80,10 +80,10 @@ const Contact = () => {
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 border rounded-2xl flex-col gap-y-8 p-6 items-start"
+            className="flex-1 border rounded-2xl bg-slate-950/60 dark:bg-slate-100/5 flex-col gap-y-8 p-6 items-start"
           >
             <input
-              className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-teal-400 transition-all"
+              className="bg-transparent border-b py-3 outline-none w-full placeholder:text-slate-100 focus:border-teal-400 transition-all"
               type="text"
               name="user_name"
               id="user_name"
@@ -121,7 +121,11 @@ const Contact = () => {
               onChange={onhandleChange}
               required
             />
-            <button type="submit" className="btn--call__action" disabled={state === false}>
+            <button
+              type="submit"
+              className="btn--call__action text-slate-100 border-slate-100"
+              disabled={state === false}
+            >
               {state ? 'Send Message' : 'Sending Message...'}
             </button>
           </motion.form>
