@@ -14,7 +14,7 @@ const Parallax = ({ type }: ParallaxProps) => {
   const yText = useTransform(scrollYProgress, [0, 1], ['0%', '500%']);
   const yBg = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   return (
-    <section className="w-full h-screen snap-center">
+    <section className="w-full h-screen">
       <div
         className="flex relative items-center justify-center w-full h-full overflow-hidden"
         ref={ref}

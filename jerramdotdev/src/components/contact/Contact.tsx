@@ -53,7 +53,7 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center">
+    <section id="contact" className="min-h-screen flex items-center justify-center mb-24 lg:mb-0">
       <div className="flex items-center justify-center">
         <div className="flex flex-col items-center justify-center lg:flex-row">
           {/** text **/}
@@ -80,7 +80,7 @@ const Contact = () => {
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 border rounded-2xl bg-slate-950/60 dark:bg-slate-100/5 flex-col gap-y-8 p-6 items-start"
+            className="flex-1 w-full border rounded-2xl bg-slate-950/60 dark:bg-slate-100/5 flex-col gap-y-8 p-6 items-start"
           >
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-slate-100 focus:border-teal-400 transition-all"
