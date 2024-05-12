@@ -7,7 +7,7 @@ export function ModeToggler() {
 
   return (
     <Button
-      className="px-6 bg-transparent hover:bg-transparent focus:border-none shadow-none"
+      className="bg-transparent hover:bg-transparent focus:border-none shadow-none"
       onClick={() => setTheme(currentTheme === 'light' ? 'dark' : 'light')}
     >
       <RiSunFill className="absolute size-6 dark:text-slate-50 rotate-90 scale-0 transition-all dark:-rotate-0 dark:scale-100" />

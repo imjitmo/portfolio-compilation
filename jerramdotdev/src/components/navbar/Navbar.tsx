@@ -34,8 +34,10 @@ const Navbar = () => {
               <FaSquareXTwitter size={30} />
             </a>
           </motion.li>
+          <li>
+            <ModeToggler />
+          </li>
         </ul>
-        <ModeToggler />
       </div>
     </nav>
   );
