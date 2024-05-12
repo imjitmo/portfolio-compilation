@@ -2,7 +2,7 @@ import Stack from './stack/Stack';
 
 const Skills = () => {
   return (
-    <section id="skills" className="min-h-screen snap-center p-10">
+    <section id="skills" className="min-h-screen p-10">
       <div className="p-10">
         <h3 className="text-3xl py-2">
           My <strong className="text-teal-400 hover:invert">Tech Stack</strong> in Web Development

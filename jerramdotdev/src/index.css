@@ -70,10 +70,13 @@
 
 @layer base {
   * {
-    @apply border-border snap-y snap-mandatory scroll-smooth;
+    @apply border-border scroll-smooth;
   }
   body {
-    @apply bg-background text-foreground font-monserrat;
+    @apply bg-background text-foreground font-monserrat snap-y snap-mandatory scroll-smooth;
+  }
+  section {
+    @apply snap-start scroll-smooth;
   }
 }
 

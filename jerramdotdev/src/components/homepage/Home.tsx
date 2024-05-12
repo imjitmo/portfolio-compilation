@@ -6,7 +6,7 @@ import Navbar from '../navbar/Navbar';
 
 const Home = () => {
   return (
-    <section id="home" className="min-h-screen snap-center relative overflow-hidden">
+    <section id="home" className="min-h-screen relative overflow-hidden">
       <Navbar />
       <div className="flex flex-col items-center justify-center gap-2 px-10">
         <h1 className="text-6xl font-semibold text-teal-400 cursor-pointer hover:invert">

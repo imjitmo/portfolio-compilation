@@ -53,8 +53,8 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className="min-h-screen pt-36 lg:pt-48">
-      <div className="w-full h-full flex items-center justify-center">
+    <section id="contact" className="min-h-screen flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <div className="flex flex-col items-center justify-center lg:flex-row">
           {/** text **/}
           <motion.div
