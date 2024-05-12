@@ -12,23 +12,27 @@ const Navigation = () => {
   return (
     <>
       <nav className="fixed top-1/2 left-12 transform -translate-x-1/2 -translate-y-1/2 w-[5rem] overflow-hidden z-50">
-        <div className="flex flex-row gap-1">
+        <div className="flex flex-row">
           <button onClick={() => setIsOpen((prev: boolean) => !prev)}>
-            {isOpen ? <FaChevronRight size={18} /> : <FaChevronLeft className="animate-bounce" size={18} />}
+            {isOpen ? (
+              <FaChevronLeft className="size-[1.25rem]" />
+            ) : (
+              <FaChevronRight className="animate-bounce size-[1.25rem]" />
+            )}
           </button>
           <motion.div
             className="mx-auto flex flex-col"
             variants={navIn('right', 0.01)}
             animate={isOpen ? 'show' : 'hidden'}
           >
-            <div className="w-full bg-slate-950/70 dark:bg-slate-100/20 h-[320px] backdrop-blur-2xl rounded-full max-w-[60px] mx-auto px-5 flex flex-col justify-between items-center text-2xl text-white/50">
+            <div className="w-full bg-slate-950/70 dark:bg-slate-100/20 h-[260px] backdrop-blur-2xl rounded-full max-w-[50px] mx-auto flex flex-col justify-evenly items-center text-xl gap-1 text-white/50">
               <Link
                 to="home"
                 activeClass="border-b border-slate-100"
                 smooth={true}
                 spy={true}
                 offset={-200}
-                className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+                className="cursor-pointer h-[30px] w-[50px] flex items-center justify-center"
               >
                 <BiHomeAlt />
               </Link>
@@ -37,7 +41,7 @@ const Navigation = () => {
                 activeClass="bg-slate-50 text-slate-950"
                 smooth={true}
                 spy={true}
-                className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+                className="cursor-pointer h-[30px] w-[50px] flex items-center justify-center"
               >
                 <BiUser />
               </Link>
@@ -46,7 +50,7 @@ const Navigation = () => {
                 activeClass="bg-slate-50 text-slate-950"
                 smooth={true}
                 spy={true}
-                className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+                className="cursor-pointer h-[30px] w-[50px] flex items-center justify-center"
               >
                 <BsClipboardData />
               </Link>
@@ -55,7 +59,7 @@ const Navigation = () => {
                 activeClass="bg-slate-50 text-slate-950"
                 smooth={true}
                 spy={true}
-                className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+                className="cursor-pointer h-[30px] w-[50px] flex items-center justify-center"
               >
                 <BsBriefcase />
               </Link>
@@ -64,7 +68,7 @@ const Navigation = () => {
                 activeClass="bg-slate-50 text-slate-950"
                 smooth={true}
                 spy={true}
-                className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+                className="cursor-pointer h-[30px] w-[50px] flex items-center justify-center"
               >
                 <BsChatSquareText />
               </Link>
@@ -73,7 +77,7 @@ const Navigation = () => {
                 activeClass="border-b"
                 smooth={true}
                 spy={true}
-                className="cursor-pointer w-[60px] text-slate-100 h-[60px] flex items-center justify-center"
+                className="cursor-pointer h-[30px] w-[50px] text-slate-100  flex items-center justify-center"
               >
                 <ModeToggler />
               </Link>

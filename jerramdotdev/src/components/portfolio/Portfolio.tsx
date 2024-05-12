@@ -3,15 +3,17 @@ import { motion } from 'framer-motion';
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="min-h-screen p-10 mb-10">
-      <h2 className="text-3xl py-5 text-teal-400 hover:invert font-semibold">Projects</h2>
-      <p className="text-md py-2 leading-8">
-        Since the beginning of my journey as a{' '}
-        <strong className="text-teal-400 hover:invert">web developer</strong>, I've done remote work for
-        different <strong className="text-teal-400 hover:invert">clients</strong> for startup and collaborated
-        with <strong className="text-teal-400 hover:invert">talented people</strong> to create digital
-        products for both business and consumer use.
-      </p>
+    <section id="portfolio" className="min-h-screen p-8 mb-8">
+      <div className="flex flex-col items-start gap-4">
+        <h2 className="text-3xl text-teal-400 hover:invert font-semibold cursor-default">Projects</h2>
+        <p className="text-md py-2 leading-8">
+          Since the beginning of my journey as a{' '}
+          <strong className="text-teal-400 hover:invert">web developer</strong>, I've done remote work for
+          different <strong className="text-teal-400 hover:invert">clients</strong> for startup and
+          collaborated with <strong className="text-teal-400 hover:invert">talented people</strong> to create
+          digital products for both business and consumer use.
+        </p>
+      </div>
       <div className="flex flex-wrap items-center justify-center gap-8 py-8">
         <motion.div
           variants={fadeIn('up', 0.3)}

@@ -23,12 +23,7 @@ const Stack = () => {
   return (
     <>
       {/* FRONTEND */}
-      <motion.div
-        variants={fadeIn('right', 0.2)}
-        viewport={{ once: true }}
-        initial="hidden"
-        whileInView="show"
-      >
+      <motion.div variants={fadeIn('up', 0.2)} viewport={{ once: true }} initial="hidden" whileInView="show">
         <Card className="min-w-[360px]">
           <CardHeader>
             <CardTitle>Front-end</CardTitle>
@@ -94,7 +89,7 @@ const Stack = () => {
 
       {/* OTHERS */}
       <motion.div
-        variants={fadeIn('left', 0.2)}
+        variants={fadeIn('down', 0.2)}
         viewport={{ once: true }}
         initial="hidden"
         whileInView="show"

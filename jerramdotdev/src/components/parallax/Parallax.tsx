@@ -16,7 +16,7 @@ const Parallax = ({ type }: ParallaxProps) => {
   return (
     <section className="w-full h-screen">
       <div
-        className="flex relative items-center justify-center w-full h-full overflow-hidden"
+        className="w-full h-screen overflow-hidden relative grid place-items-center"
         ref={ref}
         style={{
           background:
@@ -25,17 +25,19 @@ const Parallax = ({ type }: ParallaxProps) => {
               : 'linear-gradient(180deg, #111132, #505064)',
         }}
       >
-        <motion.h1 className="text-[100px] text-slate-50" style={{ y: yText }}>
+        <motion.h1 className="text-7xl text-slate-50 z-[4]" style={{ y: yText }}>
           {type === 'about' ? 'Skills' : 'Projects'}
         </motion.h1>
-        <motion.div className="bg-[url('/mountains.png')] bg-cover bg-bottom absolute w-full h-full z-[3]"></motion.div>
+        <motion.div className="bg-[url('/mountains.png')] bg-cover bg-bottom absolute inset-0 z-[3]"></motion.div>
         <motion.div
-          className="bg-[url('/sun.png')] bg-cover bg-bottom absolute w-full h-full z-[2]"
-          style={{ y: yBg, backgroundImage: `url(${type === 'about' ? '/planets.png' : '/sun.png'})` }}
+          className={`${
+            type === 'about' ? 'bg-[url(/planets.png)]' : 'bg-[url(/sun.png)]'
+          } bg-cover bg-bottom absolute inset-0 z-[2]`}
+          style={{ y: yBg }}
         ></motion.div>
         <motion.div
           style={{ x: yBg }}
-          className="bg-[url('/stars.png')] bg-cover bg-bottom absolute w-full h-full z-[1]"
+          className="bg-[url('/stars.png')] bg-cover bg-bottom absolute inset-0 z-[1]"
         ></motion.div>
       </div>
     </section>

@@ -53,18 +53,18 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center mb-24 lg:mb-0">
-      <div className="flex items-center justify-center">
+    <section id="contact" className="h-screen flex items-center justify-center">
+      <div className="flex items-center justify-center absolute px-4 mb-24 lg:mb-0">
         <div className="flex flex-col items-center justify-center lg:flex-row">
           {/** text **/}
           <motion.div
-            variants={fadeIn('right', 0.3)}
+            variants={fadeIn('down', 0.3)}
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 flex justify-start items-center"
           >
-            <div>
+            <div className="inset-0">
               <h4 className="text-2xl text-teal-400 uppercase font-medium mb-2 tracking-wide">
                 Get in touch
               </h4>
@@ -76,11 +76,11 @@ const Contact = () => {
           {/* form */}
           <motion.form
             onSubmit={sendEmail}
-            variants={fadeIn('left', 0.5)}
+            variants={fadeIn('up', 0.5)}
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 w-full border rounded-2xl bg-slate-950/60 dark:bg-slate-100/5 flex-col gap-y-8 p-6 items-start"
+            className="flex-1 w-full border rounded-2xl bg-slate-950/60 dark:bg-slate-100/5 flex-col gap-y-8 p-6 items-start inset-0"
           >
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-slate-100 focus:border-teal-400 transition-all"
