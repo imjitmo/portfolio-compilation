@@ -18,7 +18,7 @@ const Skills = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
+      <div className="flex flex-wrap justify-center items-center gap-8">
         <Stack />
       </div>
     </section>
