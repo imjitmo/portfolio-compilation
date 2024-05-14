@@ -37,11 +37,11 @@ const Stack = () => {
           <CardContent className="grid grid-cols-3 gap-4">
             <FaReact className="size-14 hover:text-teal-400" />
             <RiNextjsFill className="size-14 hover:text-teal-400" />
-            <RiTailwindCssFill className="size-14 hover:text-teal-400" />
+            <RiVuejsLine className="size-14 hover:text-teal-400" />
             <SiShadcnui className="size-14 hover:text-teal-400" />
             <SiDaisyui className="size-14 hover:text-teal-400" />
+            <RiTailwindCssFill className="size-14 hover:text-teal-400" />
             <FaBootstrap className="size-14 hover:text-teal-400" />
-            <RiVuejsLine className="size-14 hover:text-teal-400" />
           </CardContent>
           <CardFooter>
             <CardDescription className="max-w-[240px]">Environment, Library & Framework</CardDescription>
