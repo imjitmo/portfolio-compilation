@@ -20,9 +20,6 @@ module.exports = {
       fontFamily: {
         monserrat: ['monserrat', 'sans-serif'],
       },
-      backgroundImage: {
-        about: "url('/about_img.png')",
-      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

@@ -28,7 +28,7 @@ const Parallax = ({ type }: ParallaxProps) => {
         <motion.h1 className="text-7xl text-slate-50 z-[4]" style={{ y: yText }}>
           {type === 'about' ? 'Skills' : 'Projects'}
         </motion.h1>
-        <motion.div className="bg-[url('/mountains.png')] bg-cover bg-bottom absolute inset-0 z-[3]"></motion.div>
+        <div className="bg-[url('/mountains.png')] bg-cover bg-bottom absolute inset-0 z-[3]"></div>
         <motion.div
           className={`${
             type === 'about' ? 'bg-[url(/planets.png)]' : 'bg-[url(/sun.png)]'

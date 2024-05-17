@@ -16,7 +16,7 @@ const About = () => {
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex-1 bg-about bg-contain bg-no-repeat h-[640px] bg-top"
+            className="flex-1 bg-[url('/about_img.png')] bg-contain bg-no-repeat h-[640px] bg-top"
           ></motion.div>
           <motion.div
             variants={fadeIn('left', 0.5)}
