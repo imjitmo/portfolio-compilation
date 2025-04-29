@@ -10,7 +10,7 @@ const Home = () => {
       <Navbar />
       <div className="flex flex-col items-center justify-center gap-2 px-10">
         <h1 className="text-6xl font-semibold text-teal-400 cursor-pointer hover:invert">
-          Jerram Macaspac Pangilinan.//
+          Jerram Pangilinan.//
         </h1>
         <h3 className="text-2xl">Web Developer</h3>
         <p className="text-mdleading-8">
